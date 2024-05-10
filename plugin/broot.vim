@@ -1,7 +1,7 @@
 let s:broot_command = 'broot'
 let s:out_file_path = tempname()
 let s:broot_default_config_path = fnamemodify(expand('$HOME/.config/broot/conf.hjson'), ':p')
-let s:broot_nvim_config_path = fnamemodify(s:broot_default_config_path, ':h') . '/nvim.hjson'
+let s:broot_nvim_config_path = expand('<sfile>:h') . '/nvim.hjson'
 let s:broot_config_path = s:broot_default_config_path . ';' . s:broot_nvim_config_path
 
 function! s:brootCallback(code, cmd) abort
